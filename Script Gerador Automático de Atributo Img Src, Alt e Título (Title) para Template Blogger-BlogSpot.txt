@@ -1,0 +1,91 @@
+Editar os os atributos ALT e Title manualmente de uma imagem é fácil. Mas imagina editar 2.000 mil fotos? Sim, dá um baita trabalho, e quando se trata de melhorar o desempenho de SEO, é primordial otimizar as Tags ALT e Title para aumentar a relevância nas busca do Google Images. Agora, imagina se existisse um Script capaz de fazer toda otimização de imagens? Adicionar Tag ALT e Title com Auto Generator Image para Blogspot Blogger é possessível...
+
+Sei que Blogger atualizou seus recursos e widgets, com isso, alguns scripts de plug-in deixaram de funcionar. Isso inclui alguns geradores de etiquetas auto alt para imagens. Mas, felizmente, estou compartilhando um que ainda funciona perfeitamente com não apenas o novo sistema, mas também com a antiga interface do Blogger, que naturalmente é o nosso tutorial caracterizado para hoje.
+
+Siga as etapas abaixo para adicionar o gerador ao seu blog: Vá para a página Design no painel do Blogger e clique em Modelo. Clique em "Editar HTML" e depois em "Continuar". Procure o </ body> tag usando "Ctrl + F".
+
+Copie / cole o código abaixo logo antes da tag </head>:
+
+<script async='async' src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js' type='text/javascript'/>
+//SEO SCRIPT POWERED BY Antonio Carlos
+<script type='text/javascript'>
+//<![CDATA[
+$(document).ready(function() {
+ $('img').each(function(){
+ var $img = $(this);
+ var filename = $img.attr('src')
+ $img.attr('title', filename.substring((filename.lastIndexOf('/'))+1, filename.lastIndexOf('.')));
+ 
+ $img.attr('alt', filename.substring((filename.lastIndexOf('/'))+1, filename.lastIndexOf('.')));
+ });
+});
+//]]>
+</script>
+Exemplo:
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<html xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+ <head>
+  <meta content='IE=EmulateIE7' http-equiv='X-UA-Compatible'/> 
+  <b:if cond='data:blog.isMobile'> 
+   <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport'/> 
+  <b:else/> 
+   <meta content='width=1100' name='viewport'/> 
+  </b:if> 
+  <b:include data='blog' name='all-head-content'/>
+  <title><data:blog.pageTitle/></title>
+<b:skin>
+   <![CDATA[/* 
+    body { 
+     font: $(body.font); 
+     color: $(body.text.color); 
+     background: $(body.background); 
+     padding: 0 $(content.shadow.spread) $(content.shadow.spread) $(content.shadow.spread); 
+     $(body.background.override) margin: 0; 
+     padding: 0; 
+    }
+   ]]>
+  </b:skin>
+?
+?<script async='async' src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js' type='text/javascript'/>
+//SEO SCRIPT POWERED BY Antonio Carlos
+<script type='text/javascript'>
+//<![CDATA[
+$(document).ready(function() {
+ $('img').each(function(){
+ var $img = $(this);
+ var filename = $img.attr('src')
+ $img.attr('title', filename.substring((filename.lastIndexOf('/'))+1, filename.lastIndexOf('.')));
+ 
+ $img.attr('alt', filename.substring((filename.lastIndexOf('/'))+1, filename.lastIndexOf('.')));
+ });
+});
+//]]>
+</script>
+
+ </head>
+ <body>
+  <b:section class='main' id='main' showaddelement='yes'/>
+  <!-- Please Keep The Credits -->
+  <center><a href="https://www.linkedin.com/in/dicarlos-design/">DiCarlos Design</a></center>
+ </body>
+</html>
+?
+Salve o modelo.
+
+Para verificar se o script está funcionando, basta abrir o seu blog e passe o cursor do mouse sobre a imagem. Em seguida, você verá o nome da imagem.
+
+Adicionar tags "alt" e "title" a uma imagem pode ser bastante tedioso, especialmente se você estiver lidando com muitos deles. Portanto, geradores como este devem economizar muito tempo e energia. Além disso, torna o seu blog SEO-friendly também.
+
+Como o script funciona:
+
+Este script tomará automaticamente o nome da imagem e adicionará uma tag "alt" e "título" a todas as imagens do seu blog.
+
+Este script não só adiciona um "alt" e "title" tags, mas também dá um sinal de mais '+' se houver espaço no nome da imagem enviada.
+
+Portanto, tudo o que você precisa fazer para usar o script é certificar-se de que você nomear suas imagens corretamente antes de enviá-las para o Blogger. Caso contrário, não será possível ver as tags de título apropriadas.
+
+
+
+Até o próximo artigo.
+
